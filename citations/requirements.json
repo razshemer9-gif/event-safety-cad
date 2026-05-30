@@ -1,7 +1,259 @@
 {
+  "database": "event-safety-cad regulatory citations",
   "generated_from": "/standards (PDF source documents only)",
   "yaml_database_used": false,
-  "source_pdfs_found": [],
-  "citations": [],
-  "note": "Empty because /standards contains no PDF source documents. Until authoritative PDFs are added, no requirement can be cited and every requirement resolves to 'Source document required for verification'. No values were carried over from the deleted standards/israel.yaml, and none were supplied from assumptions or industry defaults."
+  "extraction_method": "Text layer extracted per page with PyMuPDF; Hebrew (RTL) quotes reconstructed into reading order without changing wording. No summarizing, interpreting, or calculating.",
+  "page_number_convention": "page_number = physical PDF sheet page (1-based). For 4.8.pdf, 6.9.pdf and 7.7.pdf the printed page equals the sheet page. For 5688.1.pdf the printed page differs from the sheet page; the standard's native clause number is given in structured_field_name and is the authoritative reference.",
+  "source_pdfs": [
+    { "filename": "4.8.pdf", "title": "Israel Police licensing spec - item 4.8 - alcoholic beverages", "pages": 9 },
+    { "filename": "6.9.pdf", "title": "Unified spec - item 6.9a - itinerant food vending (roklut mazon)", "pages": 15 },
+    { "filename": "7.7.pdf", "title": "Israel Police conditions - item 7.7h - open-air culture/entertainment/sport events for 500+ participants", "pages": 33 },
+    { "filename": "5688.1.pdf", "title": "SI 5688 part 1 - Mass events safety: Safety management system - Specifications (2006)", "pages": 35 }
+  ],
+  "citations": [
+
+    { "id": "77-SCOPE-500", "source_pdf_filename": "7.7.pdf", "page_number": 1, "structured_category": "scope", "structured_field_name": "applicability.min_participants", "quoted_requirement": "אמפיתאטרון, מקום אחר לעריכת אירוע תרבות בידור וספורט תחת כיפת השמיים, שנועדו ל-500 משתתפים או יותר", "extracted_structured_value": { "min_participants": 500 }, "verified": true },
+
+    { "id": "77-SITE-DIST-HAZMAT-50", "source_pdf_filename": "7.7.pdf", "page_number": 3, "structured_category": "site_location", "structured_field_name": "site.min_distance_from_hazardous_materials_m", "quoted_requirement": "לא ינתן אישור לקיום אירוע באתר הנמצא במרחק קטן מ-50 מטר ממקום בו מאוחסנים חומרים רעילים מתלקחים או רדיואקטיביים, או חומרים מסוכנים אחרים", "extracted_structured_value": { "min_distance_m": 50 }, "verified": true },
+
+    { "id": "77-PLAN-ENV-2500", "source_pdf_filename": "7.7.pdf", "page_number": 5, "structured_category": "drawings", "structured_field_name": "drawings.environment_plan_scale", "quoted_requirement": "לבקשה לאישור יצורף תרשים סביבה בקנה מידה של 1:2500 חתום בידי בעל מקצוע מוסמך", "extracted_structured_value": { "scale": "1:2500" }, "verified": true },
+
+    { "id": "77-PLAN-SITU-250", "source_pdf_filename": "7.7.pdf", "page_number": 5, "structured_category": "drawings", "structured_field_name": "drawings.situational_map_scale", "quoted_requirement": "לבקשה לאישור תצורף מפה מצבית בקנה מידה 1:250, חתומה בידי בעל מקצוע מוסמך", "extracted_structured_value": { "scale": "1:250" }, "verified": true },
+
+    { "id": "77-PLAN-FIRE-HYDRANT-30", "source_pdf_filename": "7.7.pdf", "page_number": 5, "structured_category": "drawings", "structured_field_name": "drawings.fire_hydrant_radius_m", "quoted_requirement": "מיקום מערכות כיבוי אש לרבות ברזי שריפה, כולל מיקומם במרחק של עד 30 מ' מחוץ לגבולות הנכס", "extracted_structured_value": { "radius_m": 30 }, "verified": true },
+
+    { "id": "77-PLAN-SITE-100", "source_pdf_filename": "7.7.pdf", "page_number": 5, "structured_category": "drawings", "structured_field_name": "drawings.site_plan_scale", "quoted_requirement": "תוכנית האתר שבו מתקיים האירוע תיערך בקנה מידה של 1:100, זולת אם דרש נותן האישור המשטרתי את עריכתה בקנה מידה אחר", "extracted_structured_value": { "scale": "1:100" }, "verified": true },
+
+    { "id": "77-OCC-SLOPE-VIEW-12", "source_pdf_filename": "7.7.pdf", "page_number": 6, "structured_category": "occupancy", "structured_field_name": "occupancy.viewing_area_max_slope_pct", "quoted_requirement": "בחישוב שטח העסק לצורך קביעת מספר המשתתפים המירבי באירוע יובאו בחשבון רק השטחים מהם יש מרחב ראייה ברור לכיוון המופע המתקיים על הבמה והשיפוע המירבי בהם אינו עולה על 12% (להלן \"שטח הצפיה\")", "extracted_structured_value": { "max_slope_pct": 12 }, "verified": true },
+
+    { "id": "77-OCC-SLOPE-GRASS-16", "source_pdf_filename": "7.7.pdf", "page_number": 6, "structured_category": "occupancy", "structured_field_name": "occupancy.standing_grass_max_slope_pct", "quoted_requirement": "במקומות עמידה על כר הדשא השיפוע המקסימלי של המשטחים לשימוש הקהל לא יעלה על 16%", "extracted_structured_value": { "max_slope_pct": 16 }, "verified": true },
+
+    { "id": "77-OCC-FRONT-STRIP-2", "source_pdf_filename": "7.7.pdf", "page_number": 6, "structured_category": "occupancy", "structured_field_name": "occupancy.excluded_strip_in_front_of_structures_m", "quoted_requirement": "בחישוב שטח הצפיה לעינין תנאי זה לא יכללו דרכי גישה, מבנים או מתקנים המצויים באותו אזור וכן שטח ברוחב שלא יפחת מ-2 מ' בחזית המבנים והמתקנים", "extracted_structured_value": { "strip_width_m": 2 }, "verified": true },
+
+    { "id": "77-OCC-SEATED-0_75", "source_pdf_filename": "7.7.pdf", "page_number": 6, "structured_category": "occupancy", "structured_field_name": "occupancy.seated_area_per_person_m2", "quoted_requirement": "היה שטח הצפיה שטח ישיבה - יחושב מספר המרבי של הצופים על פי מספר המושבים שניתן להתקין באותו שטח ... אך לא יותר מהמספר המתקבל מהחישוב של 0.75 מ\"ר לאדם", "extracted_structured_value": { "area_per_person_m2": 0.75 }, "verified": true },
+
+    { "id": "77-OCC-STANDING-1", "source_pdf_filename": "7.7.pdf", "page_number": 6, "structured_category": "occupancy", "structured_field_name": "occupancy.standing_area_per_person_m2", "quoted_requirement": "היה שטח הצפיה שטח עמידה - יחושב המספר המרבי של הצופים לפי 1 מ\"ר לאדם", "extracted_structured_value": { "area_per_person_m2": 1 }, "verified": true },
+
+    { "id": "77-FENCE-EXT-2M", "source_pdf_filename": "7.7.pdf", "page_number": 6, "structured_category": "perimeter", "structured_field_name": "perimeter.external_fence_min_height_m", "quoted_requirement": "העסק יוקף בגדר חיצונית שגובהה לא יפחת מ-2 מטר", "extracted_structured_value": { "min_height_m": 2 }, "verified": true },
+
+    { "id": "77-FENCE-EXT-STD-4273", "source_pdf_filename": "7.7.pdf", "page_number": 6, "structured_category": "perimeter", "structured_field_name": "perimeter.external_fence_standard", "quoted_requirement": "הגדר החיצונית תהיה במצב תקין בכל עת ותעמוד בדרישות תקן ישראלי מס' 4273", "extracted_structured_value": { "standard": "SI 4273" }, "verified": true },
+
+    { "id": "77-WATER-FENCE-1_10", "source_pdf_filename": "7.7.pdf", "page_number": 6, "structured_category": "site_location", "structured_field_name": "site.water_line_fence_min_height_m", "quoted_requirement": "באתר הסמוך לקו מים, יגודר קו המים בגידור שגובהו לא יפחת מ-1.10 מ' מהקרקע הטבעית", "extracted_structured_value": { "min_height_m": 1.10 }, "verified": true },
+
+    { "id": "77-ENTR-PER-1000", "source_pdf_filename": "7.7.pdf", "page_number": 7, "structured_category": "entrances", "structured_field_name": "entrances.min_count_per_spectators", "quoted_requirement": "בעסק יהיה פתח כניסה אחד לפחות לכל 1,000 צופים או חלק מהם", "extracted_structured_value": { "entrances_per": 1, "per_spectators": 1000 }, "verified": true },
+
+    { "id": "77-ENTR-GATE-1_10-700KG", "source_pdf_filename": "7.7.pdf", "page_number": 7, "structured_category": "entrances", "structured_field_name": "entrances.gate_min_width_m_and_load", "quoted_requirement": "בתוך כל פתח כניסה יותקן שער שרוחבו לא יפחת מ-1.10 מטר, אשר יהיה עשוי מחומר בלתי דליק ויהיה עמיד ללחץ של 700 ק\"ג לפחות", "extracted_structured_value": { "min_width_m": 1.10, "min_load_kg": 700 }, "verified": true },
+
+    { "id": "77-ENTR-LEADS", "source_pdf_filename": "7.7.pdf", "page_number": 7, "structured_category": "entrances", "structured_field_name": "entrances.leads_for_over_1000", "quoted_requirement": "בעסק המיועד ליותר מ-1,000 צופים יותקנו לכל פתח כניסה מובילים ... גובה המעקה יהיה 90 ס\"מ, ואורך כל מוביל יהיה 5 מטר לפחות ורוחבו 55 ס\"מ", "extracted_structured_value": { "guardrail_height_cm": 90, "lead_min_length_m": 5, "lead_width_cm": 55 }, "verified": true },
+
+    { "id": "77-ENTR-DIST-10", "source_pdf_filename": "7.7.pdf", "page_number": 7, "structured_category": "entrances", "structured_field_name": "entrances.min_distance_between_m", "quoted_requirement": "המרחק בין פתח כניסה אחד למשנהו לא יפחת ככל האפשר מ-10 מטר זה מזה והם ימוקמו, ככל האפשר, מסביב לאתר", "extracted_structured_value": { "min_distance_m": 10 }, "verified": true },
+
+    { "id": "77-ENTR-CLUSTER-8-4", "source_pdf_filename": "7.7.pdf", "page_number": 7, "structured_category": "entrances", "structured_field_name": "entrances.clustering_rule", "quoted_requirement": "היו באתר לפחות 8 פתחי כניסה, ניתן להצמיד 4 פתחי כניסה זה לזה (להלן- מקבץ כניסות), ובלבד שהמרחק בין מקבץ כניסות לפתח כניסה נוסף לא יפחת ככל האפשר מ-10 מ'", "extracted_structured_value": { "min_entrances_to_cluster": 8, "max_per_cluster": 4, "min_distance_m": 10 }, "verified": true },
+
+    { "id": "77-EXIT-LE1000-2x2_20", "source_pdf_filename": "7.7.pdf", "page_number": 7, "structured_category": "emergency_exits", "structured_field_name": "egress.exits_up_to_1000", "quoted_requirement": "בעסק המיועד ללא יותר מ-1,000 צופים יותקנו לפחות שני פתחי יציאה, כשרוחבו של כל אחד מהם לא יפחת מ-2.20 מטר", "extracted_structured_value": { "max_spectators": 1000, "min_exits": 2, "min_width_m_each": 2.20 }, "verified": true },
+
+    { "id": "77-EXIT-GT1000-PER-1000", "source_pdf_filename": "7.7.pdf", "page_number": 7, "structured_category": "emergency_exits", "structured_field_name": "egress.exits_over_1000", "quoted_requirement": "בעסק המיועד ליותר מ-1,000 צופים יותקן לפחות פתח יציאה אחד לכל 1,000 צופים או חלק מהם, שרוחבו לא יפחת מ-2.20 מטר, וזאת בנוסף לפתחים כאמור בסעיף 12(א)1", "extracted_structured_value": { "additional_exits_per_spectators": 1000, "min_width_m_each": 2.20, "additional_to_base_two": true }, "verified": true },
+
+    { "id": "77-EXIT-PANIC-4588", "source_pdf_filename": "7.7.pdf", "page_number": 7, "structured_category": "emergency_exits", "structured_field_name": "egress.panic_bolt_standard", "quoted_requirement": "כל הדלתות הנמצאות בדרכי המילוט יהיו ללא מפתנים, יפתחו בכיוון המילוט ויצוידו במנעולי בהלה. כל כנף תצויד במנעול בהלה שיעמוד בדרישות תקן ישראלי 4588 חלק 1", "extracted_structured_value": { "standard": "SI 4588 part 1", "open_in_egress_direction": true, "no_thresholds": true }, "verified": true },
+
+    { "id": "77-EXIT-CLEAR-10", "source_pdf_filename": "7.7.pdf", "page_number": 8, "structured_category": "emergency_exits", "structured_field_name": "egress.clear_area_beside_exit_m", "quoted_requirement": "מפלס השטח משני צידי כל פתח כניסה ויציאה מחוץ לאתר ובתוכו, בתחום של לפחות 10 מ' אורך משני צידי פתח כאמור, יהיה אופקי ונקי מכל חפץ ומכשול", "extracted_structured_value": { "clear_length_each_side_m": 10 }, "verified": true },
+
+    { "id": "77-BLOCKS-800", "source_pdf_filename": "7.7.pdf", "page_number": 8, "structured_category": "zoning", "structured_field_name": "crowd.block_max_spectators", "quoted_requirement": "עסק המיועד ליותר מ-1,000 צופים יחולק לגושים נפרדים שכל אחד מהם מיועד ללא יותר מ-800 צופים", "extracted_structured_value": { "applies_over_spectators": 1000, "max_per_block": 800 }, "verified": true },
+
+    { "id": "77-BLOCKS-AISLE-2_20", "source_pdf_filename": "7.7.pdf", "page_number": 8, "structured_category": "aisles", "structured_field_name": "aisle.block_min_width_m", "quoted_requirement": "רוחב כל מעבר אורכי או רוחבי לא יפחת מ-2.20 מטרים, לכל אורכו", "extracted_structured_value": { "min_width_m": 2.20 }, "verified": true },
+
+    { "id": "77-PASS-2_20", "source_pdf_filename": "7.7.pdf", "page_number": 8, "structured_category": "aisles", "structured_field_name": "aisle.to_exit_min_width_m", "quoted_requirement": "בעסק לא יפחת רוחב הדלתות, רוחב הפרוזדורים ורוחב המדרגות המובילות מהמושבים של הצופים אל פתחי היציאה מ-2.20 מטר", "extracted_structured_value": { "min_width_m": 2.20 }, "verified": true },
+
+    { "id": "77-STAIRS-23-28", "source_pdf_filename": "7.7.pdf", "page_number": 8, "structured_category": "stairs", "structured_field_name": "stairs.riser_tread", "quoted_requirement": "רום המדרגות כאמור, לא יעלה על 23 ס\"מ ורוחב השלח שלהן לא יפחת מ-28 ס\"מ", "extracted_structured_value": { "max_riser_cm": 23, "min_tread_cm": 28 }, "verified": true },
+
+    { "id": "77-SEAT-WIDTH-50", "source_pdf_filename": "7.7.pdf", "page_number": 8, "structured_category": "seating", "structured_field_name": "seating.seat_min_width_cm", "quoted_requirement": "רוחב מושב לאדם לא יפחת מ-50 ס\"מ. וזאת בין אם היה המושב נפרד ובין אם הוא חלק מספסל. היה המושב עם מסעדים, לא יובא רוחב המסעדים בחישוב רוחב המושב", "extracted_structured_value": { "min_seat_width_cm": 50 }, "verified": true },
+
+    { "id": "77-SEAT-ROW-40", "source_pdf_filename": "7.7.pdf", "page_number": 8, "structured_category": "seating", "structured_field_name": "seating.max_seats_per_row", "quoted_requirement": "שורה תכיל עד 40 מושבים", "extracted_structured_value": { "max_seats_per_row": 40 }, "verified": true },
+
+    { "id": "77-SEAT-ROWGAP-45", "source_pdf_filename": "7.7.pdf", "page_number": 8, "structured_category": "seating", "structured_field_name": "seating.min_gap_between_rows_cm", "quoted_requirement": "רוחב המעבר בין שתי שורות לא יקטן מ-45 ס\"מ", "extracted_structured_value": { "min_gap_cm": 45 }, "verified": true },
+
+    { "id": "77-SEAT-BLOCK-20-800", "source_pdf_filename": "7.7.pdf", "page_number": 8, "structured_category": "seating", "structured_field_name": "seating.block_limits", "quoted_requirement": "שורות המושבים יחולקו לגושים. כל גוש יכיל לא יותר מ-20 שורות. מספר המושבים בכל גוש לא יעלה על 800", "extracted_structured_value": { "max_rows_per_block": 20, "max_seats_per_block": 800 }, "verified": true },
+
+    { "id": "77-SEAT-EDGEBLOCK", "source_pdf_filename": "7.7.pdf", "page_number": 8, "structured_category": "seating", "structured_field_name": "seating.edge_block_limits", "quoted_requirement": "גוש קיצוני, שאין מעבר אחרי שורת המושבים האחרונה שלו, יכיל לא יותר מ-10 שורות. בגוש קיצוני שאין מעבר בניצב לשורות שלו, לא יהיו יותר מ-20 מושבים בכל שורה שבו", "extracted_structured_value": { "max_rows_no_rear_aisle": 10, "max_seats_per_row_no_perp_aisle": 20 }, "verified": true },
+
+    { "id": "77-YARD-RAMP-12", "source_pdf_filename": "7.7.pdf", "page_number": 9, "structured_category": "stairs", "structured_field_name": "stairs.tiered_ramp_max_slope_pct", "quoted_requirement": "מעברים ביציע מדורג יכללו מדרגות או מישור משופע (רמפה) שלא יעלו על 12%", "extracted_structured_value": { "max_slope_pct": 12 }, "verified": true },
+
+    { "id": "77-YARD-RISER-10-23", "source_pdf_filename": "7.7.pdf", "page_number": 9, "structured_category": "stairs", "structured_field_name": "stairs.gallery_riser_tread", "quoted_requirement": "עומק שלח מדרגות ביציע קהל לא יפחת מ-28 ס\"מ. רום כל מדרגה ביציע לא יעלה על 23 ס\"מ ולא יפחת מ-10 ס\"מ", "extracted_structured_value": { "min_tread_cm": 28, "max_riser_cm": 23, "min_riser_cm": 10 }, "verified": true },
+
+    { "id": "77-TRIB-0_3", "source_pdf_filename": "7.7.pdf", "page_number": 9, "structured_category": "stairs", "structured_field_name": "tribune.cumulative_stair_width_factor", "quoted_requirement": "בטריבונה מודולרית שתוכננה על-פי תקנים זרים, רוחב המדרגות המצטבר בטריבונה לא יפחת ממקדם 0.3 ס\"מ לאדם ... רוחב המדרגות לא יפחת מ-1.1 מ'", "extracted_structured_value": { "factor_cm_per_person": 0.3, "min_stair_width_m": 1.1 }, "verified": true },
+
+    { "id": "77-BARRIER-STAGE-5", "source_pdf_filename": "7.7.pdf", "page_number": 9, "structured_category": "stage_barrier", "structured_field_name": "stage.front_pressure_barrier_min_distance_m", "quoted_requirement": "בקדמת הבמה ובמטרה להפריד בין הקהל לבין הבמה בקו קמור ממנה ובמרחק שלא יפחת מ-5 מ' מהבמה, או ממתקנים המוצבים לפניה או בסמוך אליה, יותקנו מחיצות לחץ", "extracted_structured_value": { "min_distance_m": 5 }, "verified": true },
+
+    { "id": "77-BARRIER-SIDE-2", "source_pdf_filename": "7.7.pdf", "page_number": 9, "structured_category": "stage_barrier", "structured_field_name": "stage.side_passage_min_width_m", "quoted_requirement": "מ-2 צידי הבמה יוקצו מעברים ברוחב שלא יפחת מ-2 מ'. מעברים אלה לא ישמשו אלא להבטחת פינוי מהיר של הקהל בעת הצורך", "extracted_structured_value": { "min_width_m": 2 }, "verified": true },
+
+    { "id": "77-BARRIER-HEIGHT-1_10", "source_pdf_filename": "7.7.pdf", "page_number": 10, "structured_category": "stage_barrier", "structured_field_name": "stage.pressure_barrier_height_m", "quoted_requirement": "גובה גדר הלחץ יהיה 1.10 מטר מפני הקרקע", "extracted_structured_value": { "height_m": 1.10 }, "verified": true },
+
+    { "id": "77-LIGHT-10LUX", "source_pdf_filename": "7.7.pdf", "page_number": 10, "structured_category": "lighting", "structured_field_name": "lighting.min_illuminance_lux", "quoted_requirement": "עוצמת התאורה בכל נקודה לא תפחת מ-10 לוקס מדוד מהריצפה. התאורה תמשיך לפעול במהלך כל האירוע", "extracted_structured_value": { "min_lux": 10 }, "verified": true },
+
+    { "id": "77-LIGHT-EMERG-3SEC-60MIN", "source_pdf_filename": "7.7.pdf", "page_number": 10, "structured_category": "lighting", "structured_field_name": "lighting.emergency_response_and_duration", "quoted_requirement": "באתר תותקן תאורת חירום אשר תופעל אוטומטית תוך 3 שניות מרגע נפילת המתח ... תאורת החירום תפעל למשך 60 דקות לפחות", "extracted_structured_value": { "activation_sec": 3, "min_duration_min": 60 }, "verified": true },
+
+    { "id": "77-LIGHT-100LUX-POINTS", "source_pdf_filename": "7.7.pdf", "page_number": 10, "structured_category": "lighting", "structured_field_name": "lighting.service_points_min_lux", "quoted_requirement": "בנקודות משטרה, עזרה ראשונה וכיבוי אש תותקן תאורה בעוצמה שלא תפחת מ-100 לוקס", "extracted_structured_value": { "min_lux": 100, "locations": ["police", "first_aid", "firefighting"] }, "verified": true },
+
+    { "id": "77-LIGHT-EMERG-MIN-1LUX", "source_pdf_filename": "7.7.pdf", "page_number": 10, "structured_category": "lighting", "structured_field_name": "lighting.emergency_min_after_60min_lux", "quoted_requirement": "לא תפחת עוצמת תאורת החירום מ-10 לוקס מדוד מפני הקרקע בעת פעולה ראשונית ולא פחות מ-1 לוקס כעבור 60 דקות", "extracted_structured_value": { "initial_min_lux": 10, "after_60min_min_lux": 1 }, "verified": true },
+
+    { "id": "77-GEN-4HR-8SEC", "source_pdf_filename": "7.7.pdf", "page_number": 10, "structured_category": "power", "structured_field_name": "generator.emergency_capacity_and_start", "quoted_requirement": "באתר יותקן גנרטור חירום בעל הספק אשר יאפשר הפעלת תאורת החירום ומערכת הכריזה למשך 4 שעות לפחות. הגנרטור יופעל אוטומטית, תוך 8 שניות לכל היותר", "extracted_structured_value": { "min_runtime_hours": 4, "max_start_sec": 8 }, "verified": true },
+
+    { "id": "77-GEN-FENCE-180-60", "source_pdf_filename": "7.7.pdf", "page_number": 11, "structured_category": "power", "structured_field_name": "generator.enclosure_fence", "quoted_requirement": "קיר בנוי או גדר רשת מתכתית חזקה בגובה שלא יפחת מ-180 ס\"מ, שחלקה התחתון בגובה 60 ס\"מ לפחות, עשויה מחומר אטום ובלתי דליק", "extracted_structured_value": { "min_fence_height_cm": 180, "solid_base_height_cm": 60 }, "verified": true },
+
+    { "id": "77-GEN-CLEAR-1M", "source_pdf_filename": "7.7.pdf", "page_number": 11, "structured_category": "power", "structured_field_name": "generator.min_clearance_to_structures_m", "quoted_requirement": "אין לקיים כל מבנה או מתקן במרחק קטן מ-1 מ' מהגנרטור או\\וגם ממכל הדלק החיצוני שלו", "extracted_structured_value": { "min_clearance_m": 1 }, "verified": true },
+
+    { "id": "77-GEN-NO-BENZINE", "source_pdf_filename": "7.7.pdf", "page_number": 11, "structured_category": "power", "structured_field_name": "generator.benzine_prohibited", "quoted_requirement": "אין להתקין באירוע גנרטור המונע בבנזין", "extracted_structured_value": { "benzine_generator_allowed": false }, "verified": true },
+
+    { "id": "77-SIGN-EXIT-GREEN", "source_pdf_filename": "7.7.pdf", "page_number": 11, "structured_category": "signage", "structured_field_name": "signage.exit_sign", "quoted_requirement": "שלטים מוארים שרקעם לבן עליהם כתוב בירוק \"יציאה\", אשר יוצבו מעל כל הפתחים באתר לכוון היציאה ממנו", "extracted_structured_value": { "text": "יציאה", "color": "green_on_white", "illuminated": true }, "verified": true },
+
+    { "id": "77-SIGN-EXIT-LETTERS-36-12", "source_pdf_filename": "7.7.pdf", "page_number": 11, "structured_category": "signage", "structured_field_name": "signage.exit_entrance_letter_dimensions", "quoted_requirement": "גובה האותיות על גבי שלטי היציאה והכניסה לא יפחת מ-36 ס\"מ, רוחבן לא יפחת מ-12 ס\"מ ועובי האות לא יפחת מ-12 מ\"מ", "extracted_structured_value": { "letter_height_cm": 36, "letter_width_cm": 12, "letter_thickness_mm": 12 }, "verified": true },
+
+    { "id": "77-SIGN-ENTRANCE-RED", "source_pdf_filename": "7.7.pdf", "page_number": 11, "structured_category": "signage", "structured_field_name": "signage.entrance_sign", "quoted_requirement": "שלטים שרקעם לבן עליהם כתוב באדום \"כניסה\" אשר יוצבו מעל כל פתחי הכניסה מחוץ לאתר", "extracted_structured_value": { "text": "כניסה", "color": "red_on_white" }, "verified": true },
+
+    { "id": "77-SIGN-HEIGHT-2_10", "source_pdf_filename": "7.7.pdf", "page_number": 12, "structured_category": "signage", "structured_field_name": "signage.facility_sign_min_height_m", "quoted_requirement": "השלטים יותקנו בגובה שלא יפחת מ-2.10 מפני הקרקע. גובה השלט ביחס לפני הקרקע יצויין על מפת האתר", "extracted_structured_value": { "min_height_m": 2.10 }, "verified": true },
+
+    { "id": "77-LOSTCHILD-5000", "source_pdf_filename": "7.7.pdf", "page_number": 12, "structured_category": "facilities", "structured_field_name": "lost_children.threshold_spectators", "quoted_requirement": "באירוע בו מתוכננים להשתתף 5,000 איש ומעלה תוקם נקודה לילדים אובדים כולל שילוט ברור. המקום יהיה מקורה ויצויד בשולחן, כסאות ואמצעי קשר ונציג מארגנים", "extracted_structured_value": { "threshold_spectators": 5000 }, "verified": true },
+
+    { "id": "77-EMERG-ENTR-4_2", "source_pdf_filename": "7.7.pdf", "page_number": 12, "structured_category": "emergency_access", "structured_field_name": "emergency_access.gated_site_entrances", "quoted_requirement": "באתר מגודר יותקנו לפחות שתי כניסות לרכב חרום והצלה (להלן- כניסות חירום). רוחבה וגובהה של כניסת חירום לא יפחתו מ-4.2 מ'. היה מספר הצופים המירבי באירוע פחות מ-3,000 איש, ניתן להתקין כניסת חירום אחת בלבד", "extracted_structured_value": { "min_emergency_entrances": 2, "min_width_m": 4.2, "min_height_m": 4.2, "single_allowed_below_spectators": 3000 }, "verified": true },
+
+    { "id": "77-EMERG-ROUTE-2", "source_pdf_filename": "7.7.pdf", "page_number": 13, "structured_category": "emergency_access", "structured_field_name": "emergency_access.external_access_routes", "quoted_requirement": "לאתר, בין אם הוא מגודר ובין אם לאו, יובילו 2 דרכי גישה נפרדות לרכב החירום מצירי תנועה ראשיים באיזור האתר", "extracted_structured_value": { "min_access_routes": 2 }, "verified": true },
+
+    { "id": "77-EMERG-ROUTE-WIDTH-4_2", "source_pdf_filename": "7.7.pdf", "page_number": 13, "structured_category": "emergency_access", "structured_field_name": "emergency_access.route_min_width_m", "quoted_requirement": "רוחב דרכי גישה וחירום לא יפחת מ-4.2 מ'", "extracted_structured_value": { "min_width_m": 4.2 }, "verified": true },
+
+    { "id": "77-PA-30M", "source_pdf_filename": "7.7.pdf", "page_number": 14, "structured_category": "pa_system", "structured_field_name": "pa.audible_range_m", "quoted_requirement": "מע' הכריזה תשמע מכל מקום בתוך הארוע ומחוץ לגדר האירוע במרחק של עד 30 מ'", "extracted_structured_value": { "audible_range_m": 30 }, "verified": true },
+
+    { "id": "77-PA-5MSG", "source_pdf_filename": "7.7.pdf", "page_number": 14, "structured_category": "pa_system", "structured_field_name": "pa.min_prerecorded_messages", "quoted_requirement": "למערכת הכריזה בחדר הבקרה תהיה אפשרות להקליט ולכרוז לפחות 5 נוסחי כריזה שיופעלו באירוע חירום בלחיצת כפתור", "extracted_structured_value": { "min_messages": 5 }, "verified": true },
+
+    { "id": "77-CCTV-10000-2MP", "source_pdf_filename": "7.7.pdf", "page_number": 14, "structured_category": "cctv", "structured_field_name": "cctv.threshold_and_resolution", "quoted_requirement": "באירוע המיועד לצפי קהל של 10,000 איש ומעלה תותקן מע' טמ\"ס ברזולוציה של 2.00 מגה פיקסל לפחות", "extracted_structured_value": { "threshold_spectators": 10000, "min_resolution_mp": 2.00 }, "verified": true },
+
+    { "id": "77-CCTV-FILTER-20M", "source_pdf_filename": "7.7.pdf", "page_number": 14, "structured_category": "cctv", "structured_field_name": "cctv.filtering_area_radius_m", "quoted_requirement": "שטח סינון ורחבות כניסה חיצוניות ברדיוס שלא יפחת מ-20 מ'", "extracted_structured_value": { "min_radius_m": 20 }, "verified": true },
+
+    { "id": "77-CCTV-REC-14D", "source_pdf_filename": "7.7.pdf", "page_number": 14, "structured_category": "cctv", "structured_field_name": "cctv.recording_retention_days", "quoted_requirement": "ההקלטה תישמר למשך 14 יום לפחות ממועד צילומה", "extracted_structured_value": { "min_retention_days": 14 }, "verified": true },
+
+    { "id": "77-HAZMAT-158", "source_pdf_filename": "7.7.pdf", "page_number": 21, "structured_category": "hazardous_materials", "structured_field_name": "hazmat.gas_standard", "quoted_requirement": "מיכלי גז וכלי קיבול בהם מאוחסנים חומרים מסוכנים, יותקנו ויוגנו בהתאם לדרישות הקבועות בתקן ישראלי מס' 158 על כל חלקיו", "extracted_structured_value": { "standard": "SI 158" }, "verified": true },
+
+    { "id": "77-CASH-BOOTH-2000", "source_pdf_filename": "7.7.pdf", "page_number": 21, "structured_category": "ticketing", "structured_field_name": "ticketing.booth_per_spectators", "quoted_requirement": "תותקן קופה אחת לכל 2,000 צופים", "extracted_structured_value": { "booths_per": 1, "per_spectators": 2000 }, "verified": true },
+
+    { "id": "77-CASH-SAFE-40_08", "source_pdf_filename": "7.7.pdf", "page_number": 21, "structured_category": "ticketing", "structured_field_name": "ticketing.safe_spec", "quoted_requirement": "בתוך המבנה תותקן כספת בהתאם למפרט 40.08 לצורך אחסון הכרטיסים ופדיון הכסף", "extracted_structured_value": { "spec": "40.08" }, "verified": true },
+
+    { "id": "77-ENTRYSIGN-12", "source_pdf_filename": "7.7.pdf", "page_number": 15, "structured_category": "signage", "structured_field_name": "signage.capacity_sign_letter_height_cm", "quoted_requirement": "בשלט יצוין: \"עסק מיועד ל______ מבקרים\". האותיות יירשמו בצבע שחור על רקע לבן וגובהן של האותיות יהיה 12 ס\"מ לפחות", "extracted_structured_value": { "min_letter_height_cm": 12, "color": "black_on_white" }, "verified": true },
+
+    { "id": "77-OPEN-60MIN", "source_pdf_filename": "7.7.pdf", "page_number": 16, "structured_category": "operations", "structured_field_name": "operations.gate_open_before_min", "quoted_requirement": "60 דקות לפחות לפני המועד שנקבע לתחילת האירוע ייפתחו דלתות העסק לכניסת הקהל. בין אירוע לאירוע תהיה הפסקה של 90 דקות לפחות", "extracted_structured_value": { "open_before_min": 60, "break_between_events_min": 90 }, "verified": true },
+
+    { "id": "77-MULTI-BREAK-90", "source_pdf_filename": "7.7.pdf", "page_number": 17, "structured_category": "operations", "structured_field_name": "operations.break_consecutive_events_min", "quoted_requirement": "בין אירוע לאירוע הבא באתר, תהיה הפסקה של שעה וחצי לפחות לשם יציאה בטוחה של הצופים ולשם בדיקת האתר והכנתו", "extracted_structured_value": { "min_break_min": 90 }, "verified": true },
+
+    { "id": "77-SEC-LIST-48H", "source_pdf_filename": "7.7.pdf", "page_number": 19, "structured_category": "security_staffing", "structured_field_name": "security.list_submission_before_hours", "quoted_requirement": "רשימת המאבטחים והבודקים הביטחוניים תועבר לקצין הרישוי ביחידה הטריטוריאלית בה מתנהל הארוע לא יאוחר מ-48 שעות לפני תחילת האירוע", "extracted_structured_value": { "before_hours": 48 }, "verified": true },
+
+    { "id": "77-SEC-COURSE", "source_pdf_filename": "7.7.pdf", "page_number": 19, "structured_category": "security_staffing", "structured_field_name": "security.training_days", "quoted_requirement": "מאבטחים בוגרי קורס בסיסי 6 ימים ובודקים בטחוניים בוגרי קורס 4 ימים יוצבו על-פי תוכנית האבטחה המאושרת", "extracted_structured_value": { "guard_course_days": 6, "checker_course_days": 4 }, "verified": true },
+
+    { "id": "77-SEC-MANAGER-1000", "source_pdf_filename": "7.7.pdf", "page_number": 18, "structured_category": "security_staffing", "structured_field_name": "security.security_manager_threshold", "quoted_requirement": "באירועים 1000 משתתפים ומעלה - בעל העסק ימנה מנהל אבטחה כהגדרתו בסעיף 1ח'", "extracted_structured_value": { "threshold_participants": 1000 }, "verified": true },
+
+    { "id": "77-SEC-KEY", "source_pdf_filename": "7.7.pdf", "page_number": 19, "structured_category": "security_staffing", "structured_field_name": "security.staffing_key", "quoted_requirement": "פיקוח ובקרה- הצבת 2 אחמשי\"ם מפקחי שמירה בכל אירוע; שער כניסה לרכב - הצבת מאבטח בסיסי אחד לכל שער; שער כניסה לקהל- מאבטח בסיסי אחד לכל שער רגלי; שרוול כניסה לקהל- בודק ביטחוני אחד לכל שרוול; שער יציאה לקהל- בודק ביטחוני אחד לכל שער; פתחי יציאות חירום- בודק ביטחוני אחד לכל פתח", "extracted_structured_value": { "supervisors_per_event": 2, "guard_per_vehicle_gate": 1, "guard_per_pedestrian_gate": 1, "checker_per_entry_sleeve": 1, "checker_per_exit_gate": 1, "checker_per_emergency_exit": 1 }, "verified": true },
+
+    { "id": "77-SEC-STAGE-3M", "source_pdf_filename": "7.7.pdf", "page_number": 20, "structured_category": "security_staffing", "structured_field_name": "security.stage_front_checker_per_m", "quoted_requirement": "קדמת במה- הצבת בודקים בעלי הכשרה תרבות ובידור, אחד לכל 3 מ' אורך", "extracted_structured_value": { "checker_per_length_m": 3 }, "verified": true },
+
+    { "id": "77-SEC-SOUND-5M", "source_pdf_filename": "7.7.pdf", "page_number": 20, "structured_category": "security_staffing", "structured_field_name": "security.sound_position_checker_per_m", "quoted_requirement": "עמדות סאונד והפקה- הצבת בודק ביטחוני לפחות אחד לכל 5 מטר אורך", "extracted_structured_value": { "checker_per_length_m": 5 }, "verified": true },
+
+    { "id": "77-FOOD-DIST-10", "source_pdf_filename": "7.7.pdf", "page_number": 21, "structured_category": "vendors", "structured_field_name": "vendors.min_distance_from_entrances_m", "quoted_requirement": "לא יותקנו מקומות מכירה בשטח האתר בסמוך לכניסות, ליציאות, למעברים למדרגות ובסמוך לבמות. המרחק בין נקודות המכירה לכניסות לא יפחת מ-10 מ'", "extracted_structured_value": { "min_distance_m": 10 }, "verified": true },
+
+    { "id": "77-FOOD-FIRE-10", "source_pdf_filename": "7.7.pdf", "page_number": 21, "structured_category": "vendors", "structured_field_name": "vendors.fire_gas_point_min_distance_from_viewing_m", "quoted_requirement": "נקודות מכירה בהם קיים שימוש באש או בגז יוצבו במרחק העולה על 10 מ' לפחות משטח הצפיה בכפוף לאישור כב\"ה ויועץ הבטיחות של האירוע", "extracted_structured_value": { "min_distance_m": 10 }, "verified": true },
+
+    { "id": "77-ALC-CUPS", "source_pdf_filename": "7.7.pdf", "page_number": 21, "structured_category": "alcohol", "structured_field_name": "alcohol.cup_type", "quoted_requirement": "מכירה וצריכה של כל סוגי המשקאות (משכרים ושאינם משכרים) תהיה בכוסות פלסטיק לא קשיח בלבד", "extracted_structured_value": { "cups": "non_rigid_plastic_only" }, "verified": true },
+
+    { "id": "77-ALC-SIGN-40-50", "source_pdf_filename": "7.7.pdf", "page_number": 21, "structured_category": "alcohol", "structured_field_name": "alcohol.warning_sign_dimensions_cm", "quoted_requirement": "השלט יהיה עשוי מחומר קשיח, למעט קרטון, שמידותיו 40X50 ס\"מ", "extracted_structured_value": { "width_cm": 40, "height_cm": 50 }, "verified": true },
+
+    { "id": "77-ALC-SIGN-HEIGHT", "source_pdf_filename": "7.7.pdf", "page_number": 21, "structured_category": "alcohol", "structured_field_name": "alcohol.warning_sign_mount_height_m", "quoted_requirement": "השלט ייקבע בגובה 1.80 מטר עד 2.20 מטר מהרצפה ויהיה גלוי לבאי המקום", "extracted_structured_value": { "min_height_m": 1.80, "max_height_m": 2.20 }, "verified": true },
+
+    { "id": "77-ALC-UNDER18", "source_pdf_filename": "7.7.pdf", "page_number": 21, "structured_category": "alcohol", "structured_field_name": "alcohol.minimum_age", "quoted_requirement": "לא יימכרו משקאות משכרים למי שטרם מלאו לו 18 שנים", "extracted_structured_value": { "min_age": 18 }, "verified": true },
+
+    { "id": "77-CASH-50000", "source_pdf_filename": "7.7.pdf", "page_number": 21, "structured_category": "operations", "structured_field_name": "money.secured_courier_threshold_nis", "quoted_requirement": "סכום פדיון 50,000 ש\"ח ומעלה - יש להעביר באמצעות בלדרות מאובטחת המחזיקה ברשיון עסק לפי פריט 8.3א' בצו רישוי עסקים", "extracted_structured_value": { "threshold_nis": 50000 }, "verified": true },
+
+    { "id": "77-SECVEH-3000", "source_pdf_filename": "7.7.pdf", "page_number": 21, "structured_category": "emergency_access", "structured_field_name": "security_vehicle.access_routes_threshold", "quoted_requirement": "באירועים 3000 משתתפים ומעלה תהינה שתי דרכי גישה חיצוניות לפחות לרכב ביטחון. גובה ורוחב דרך הגישה יהיה 4.20 מטר לפחות והיא תגיע לתוך תחום העסק", "extracted_structured_value": { "threshold_participants": 3000, "min_routes": 2, "min_width_m": 4.20, "min_height_m": 4.20 }, "verified": true },
+
+    { "id": "77-STAGING-6x12", "source_pdf_filename": "7.7.pdf", "page_number": 22, "structured_category": "emergency_access", "structured_field_name": "staging.rescue_forces_area_m", "quoted_requirement": "יש להתקין בתוך שטח העסק מקום בשטח להיערכות כוחות הצלה באורך 6 מ' על 12 מ' לפחות", "extracted_structured_value": { "min_length_m": 6, "min_width_m": 12 }, "verified": true },
+
+    { "id": "77-WATER-2STN", "source_pdf_filename": "7.7.pdf", "page_number": 22, "structured_category": "water", "structured_field_name": "water.drinking_stations_near_stage", "quoted_requirement": "בקרבת הבמה ולפחות ב-2 צידיה יותקנו 2 מתקני מים לצורך חלוקת מים לקהל", "extracted_structured_value": { "min_stations": 2, "near_stage": true }, "verified": true },
+
+    { "id": "77-TRAFFIC-5000", "source_pdf_filename": "7.7.pdf", "page_number": 22, "structured_category": "traffic", "structured_field_name": "traffic.engineering_opinion_threshold", "quoted_requirement": "באירוע עד-5,000 (בו זמנית) - אין צורך בחוו\"ד הנדסית. באירוע מעל 5000 צופים בו זמנית - מנהל העסק יגיש תוכניות להסדרי תנועה וחנייה באירוע ע\"י מהנדס תנועה", "extracted_structured_value": { "threshold_spectators": 5000 }, "verified": true },
+
+    { "id": "77-COMPLETE-7D-24H", "source_pdf_filename": "7.7.pdf", "page_number": 22, "structured_category": "operations", "structured_field_name": "operations.completion_notice_deadlines", "quoted_requirement": "עבודות תשתית - לא יאוחר מ-7 ימים לפני מועד האירוע ... עבודות להקמת מבנים ומתקנים ארעיים באתר, לרבות במה ארעית - לא יאוחר מ-24 שעות לפני מועד האירוע", "extracted_structured_value": { "infrastructure_days_before": 7, "temp_structures_hours_before": 24 }, "verified": true },
+
+    { "id": "77-TEMPSTRUCT-4273", "source_pdf_filename": "7.7.pdf", "page_number": 26, "structured_category": "structures", "structured_field_name": "temporary_structures.guardrails_standard", "quoted_requirement": "תקינות גידור ומעקות לפי ת\"י 4273. מחיצות לחץ לפי סעיף 18 ה' בפריט רישוי 7.7 ה'", "extracted_structured_value": { "guardrail_standard": "SI 4273" }, "verified": true },
+
+    { "id": "77-NATURE-ALC-STOP", "source_pdf_filename": "7.7.pdf", "page_number": 33, "structured_category": "nature_party", "structured_field_name": "nature_party.alcohol_sale_stop", "quoted_requirement": "מכירת אלכוהול באירוע מעל 12 שעות, תופסק 3 שעות לפני סיום האירוע, באירוע מתחת ל-12 שעות תופסק המכירה שעה לפני סיומה", "extracted_structured_value": { "over_12h_stop_hours_before": 3, "under_12h_stop_hours_before": 1 }, "verified": true },
+
+    { "id": "48-CCTV-1_3MP", "source_pdf_filename": "4.8.pdf", "page_number": 1, "structured_category": "cctv", "structured_field_name": "cctv.min_resolution_mp", "quoted_requirement": "בעסק תותקן מערכת מצלמות טלוויזיה במעגל סגור (טמ\"ס) ברזולוציה של 1.3 מגה פיקסל לפחות או שווה ערך", "extracted_structured_value": { "min_resolution_mp": 1.3 }, "verified": true },
+
+    { "id": "48-CCTV-EXIT-10M", "source_pdf_filename": "4.8.pdf", "page_number": 1, "structured_category": "cctv", "structured_field_name": "cctv.exit_camera_range_m", "quoted_requirement": "בכל יציאה מהעסק תוצב מצלמה הצופה כלפי חוץ. המצלמה תצפה עד למרחק של 10 מטר מהיציאה", "extracted_structured_value": { "range_m": 10 }, "verified": true },
+
+    { "id": "48-CCTV-FACADE-30M", "source_pdf_filename": "4.8.pdf", "page_number": 1, "structured_category": "cctv", "structured_field_name": "cctv.facade_coverage_m", "quoted_requirement": "מסביב לעסק באופן שיצלם את פאות המבנה בחפיפה עד למרחק של 30 מ'", "extracted_structured_value": { "range_m": 30 }, "verified": true },
+
+    { "id": "48-CCTV-25FPS", "source_pdf_filename": "4.8.pdf", "page_number": 1, "structured_category": "cctv", "structured_field_name": "cctv.min_fps", "quoted_requirement": "מהירות הצילום לא תהיה פחותה מ-25 FPS", "extracted_structured_value": { "min_fps": 25 }, "verified": true },
+
+    { "id": "48-CCTV-BACKUP-1H", "source_pdf_filename": "4.8.pdf", "page_number": 1, "structured_category": "cctv", "structured_field_name": "cctv.power_backup_hours", "quoted_requirement": "המערכת תכלול גיבוי למקרה של הפסקת חשמל למשך שעה לפחות, למערכת ההקלטה וספקי הכוח של מצלמות הטמ\"ס", "extracted_structured_value": { "min_backup_hours": 1 }, "verified": true },
+
+    { "id": "48-REC-14D", "source_pdf_filename": "4.8.pdf", "page_number": 2, "structured_category": "cctv", "structured_field_name": "cctv.recording_retention_days", "quoted_requirement": "ההקלטה תישמר למשך 14 יום לפחות ממועד צילומה", "extracted_structured_value": { "min_retention_days": 14 }, "verified": true },
+
+    { "id": "48-PA-200", "source_pdf_filename": "4.8.pdf", "page_number": 2, "structured_category": "pa_system", "structured_field_name": "pa.threshold_persons", "quoted_requirement": "בעסק המיועד ל-200 איש ומעלה, תותקן מערכת כריזה שתאפשר מסירת הודעות באירועי חירום בכל שטח העסק", "extracted_structured_value": { "threshold_persons": 200 }, "verified": true },
+
+    { "id": "48-OCC-SIGN-12", "source_pdf_filename": "4.8.pdf", "page_number": 2, "structured_category": "signage", "structured_field_name": "signage.occupancy_sign_letter_height_cm", "quoted_requirement": "האותיות יירשמו בצבע שחור על רקע לבן וגובהן יהיה 12 ס\"מ לפחות", "extracted_structured_value": { "min_letter_height_cm": 12, "color": "black_on_white" }, "verified": true },
+
+    { "id": "48-COUNT-200", "source_pdf_filename": "4.8.pdf", "page_number": 2, "structured_category": "crowd_counting", "structured_field_name": "crowd_counting.threshold_persons", "quoted_requirement": "בעסק שהתפוסה המותרת בו היא 200 איש ומעלה, תותקן מערכת לספירת קהל", "extracted_structured_value": { "threshold_persons": 200 }, "verified": true },
+
+    { "id": "48-ALC-UNDER18", "source_pdf_filename": "4.8.pdf", "page_number": 3, "structured_category": "alcohol", "structured_field_name": "alcohol.minimum_age", "quoted_requirement": "לא יועסקו במכירת משקאות משכרים מי שטרם מלאו להם 18 שנים", "extracted_structured_value": { "min_age": 18 }, "verified": true },
+
+    { "id": "48-ALC-SIGN-40-50", "source_pdf_filename": "4.8.pdf", "page_number": 3, "structured_category": "alcohol", "structured_field_name": "alcohol.warning_sign_dimensions_cm", "quoted_requirement": "השלט יהיה עשוי מחומר קשיח, למעט קרטון, שמידותיו 40*50 ס\"מ", "extracted_structured_value": { "width_cm": 40, "height_cm": 50 }, "verified": true },
+
+    { "id": "48-ALC-SIGN-LETTER-2_5", "source_pdf_filename": "4.8.pdf", "page_number": 3, "structured_category": "alcohol", "structured_field_name": "alcohol.warning_sign_letter_cm", "quoted_requirement": "האותיות בשלט יהיו בצבע שחור על רקע לבן, כאשר האותיות בפסקה הראשונה להודעה יהיו בגודל אחיד של 2.5*2.5 ס\"מ", "extracted_structured_value": { "letter_size_cm": 2.5 }, "verified": true },
+
+    { "id": "48-ALC-SIGN-HEIGHT", "source_pdf_filename": "4.8.pdf", "page_number": 3, "structured_category": "alcohol", "structured_field_name": "alcohol.warning_sign_mount_height_m", "quoted_requirement": "השלט ייקבע בגובה 1.80 מטר עד 2.20 מטר מהרצפה ויהיה גלוי לבאי המקום", "extracted_structured_value": { "min_height_m": 1.80, "max_height_m": 2.20 }, "verified": true },
+
+    { "id": "48-SAFE-200", "source_pdf_filename": "4.8.pdf", "page_number": 3, "structured_category": "security_equipment", "structured_field_name": "safe.threshold_persons", "quoted_requirement": "בעסק שהתפוסה המותרת בו היא 200 איש ומעלה, תותקן כספת בהתאם לנספח א'", "extracted_structured_value": { "threshold_persons": 200 }, "verified": true },
+
+    { "id": "48-OPENAIR-CUPS", "source_pdf_filename": "4.8.pdf", "page_number": 3, "structured_category": "alcohol", "structured_field_name": "alcohol.open_air_cup_type", "quoted_requirement": "כאשר מדובר באירועים תחת כיפת השמיים או באירועים ארעיים, מכירה וצריכה של כל סוגי המשקאות (משכרים ושאינם משכרים) תהיה בכוסות פלסטיק לא קשיח בלבד", "extracted_structured_value": { "cups": "non_rigid_plastic_only" }, "verified": true },
+
+    { "id": "48-SAFE-WEIGHT-250", "source_pdf_filename": "4.8.pdf", "page_number": 5, "structured_category": "security_equipment", "structured_field_name": "safe.min_weight_kg", "quoted_requirement": "משקלה לא יפחת מ-250 ק\"ג", "extracted_structured_value": { "min_weight_kg": 250 }, "verified": true },
+
+    { "id": "48-SAFE-WALL", "source_pdf_filename": "4.8.pdf", "page_number": 5, "structured_category": "security_equipment", "structured_field_name": "safe.wall_construction", "quoted_requirement": "פח חיצוני בעובי 5 מ\"מ. פח פנימי בעובי 3 מ\"מ. בין הפחים תהיה יציקת בטון ב-400. סה\"כ עובי כולל של הדופן לא יפחת מ-70 מ\"מ. סה\"כ עובי כולל של הדלת לא יפחת מ-65 מ\"מ", "extracted_structured_value": { "outer_plate_mm": 5, "inner_plate_mm": 3, "concrete": "B-400", "min_wall_thickness_mm": 70, "min_door_thickness_mm": 65 }, "verified": true },
+
+    { "id": "48-SAFE-ANCHOR", "source_pdf_filename": "4.8.pdf", "page_number": 6, "structured_category": "security_equipment", "structured_field_name": "safe.floor_anchoring", "quoted_requirement": "עיגון לרצפה בעובי של לפחות 10 ס\"מ מבטון מזויין ב-300. העיגון לרצפת הבטון יבוצע באמצעות 4 עוגני חץ או 4 ברגי מבוג' (עוגן) בקוטר 12 מ\"מ ובאורך 16 ס\"מ לפחות", "extracted_structured_value": { "concrete_min_thickness_cm": 10, "concrete": "B-300", "anchors": 4, "anchor_diameter_mm": 12, "anchor_min_length_cm": 16 }, "verified": true },
+
+    { "id": "48-MONEY-50000", "source_pdf_filename": "4.8.pdf", "page_number": 3, "structured_category": "operations", "structured_field_name": "money.secured_courier_threshold_nis", "quoted_requirement": "מ-50,000 ₪ ועד בכלל – באמצעות בלדרות מאובטחת המחזיקה ברישיון עסק לפי פריט 8.3 א' בצו רישוי עסקים", "extracted_structured_value": { "threshold_nis": 50000 }, "verified": true },
+
+    { "id": "69-PLANS", "source_pdf_filename": "6.9.pdf", "page_number": 4, "structured_category": "documentation", "structured_field_name": "documents.required_plans", "quoted_requirement": "לבקשה לרישיון יצורפו, לאחר שנחתמו בידי בעל מקצוע מוסמך: תרשים סביבה, מפה מצבית ותכנית עסק, כמפורט בתקנות 12-15 לתקנות", "extracted_structured_value": { "plans": ["environment_diagram", "situational_map", "business_plan"] }, "verified": true },
+
+    { "id": "69-WATER-TANK-200", "source_pdf_filename": "6.9.pdf", "page_number": 8, "structured_category": "water", "structured_field_name": "water.tank_min_volume_liters", "quoted_requirement": "נפח המכל יספיק לצורך הפעילות המרבית הנדרשת ביום עבודה של העסק (2 ליטר מים למנה אחת לפחות), ובכל מקרה לא יפחת מ-200 ליטרים", "extracted_structured_value": { "min_volume_liters": 200, "liters_per_portion": 2 }, "verified": true },
+
+    { "id": "69-PASSAGE-70-90", "source_pdf_filename": "6.9.pdf", "page_number": 9, "structured_category": "aisles", "structured_field_name": "stall.passage_min_width_cm", "quoted_requirement": "רוחב המעבר במתקן העסק יהיה מספיק לצורך מעבר חופשי וביצוע פעולות תחזוקה וניקיון: כ-70 סנטימטרים לפחות, ואם בשני צידי המעבר מצויים מתקנים שפולטים חום, כ-90 סנטימטרים לפחות", "extracted_structured_value": { "min_width_cm": 70, "min_width_heat_both_sides_cm": 90 }, "verified": true },
+
+    { "id": "69-TEMP-25", "source_pdf_filename": "6.9.pdf", "page_number": 9, "structured_category": "food_safety", "structured_field_name": "stall.max_internal_temperature_c", "quoted_requirement": "יוודא בעל העסק כי הטמפרטורה בתוך מתקן העסק לא תעלה על 25 מעלות צלזיוס", "extracted_structured_value": { "max_temp_c": 25 }, "verified": true },
+
+    { "id": "69-COOK-75-2", "source_pdf_filename": "6.9.pdf", "page_number": 11, "structured_category": "food_safety", "structured_field_name": "food.cook_temperature_c", "quoted_requirement": "טיגון ואפיית מזון שאינו מוכן לאכילה מן הצומח, הנדרש עבורו טיפול טרמי, תיעשה כך שטמפרטורה במזון לא תפחת מ-75 מעלות צלזיוס, למשך 2 דקות לפחות", "extracted_structured_value": { "min_temp_c": 75, "min_duration_min": 2 }, "verified": true },
+
+    { "id": "69-FRY-180", "source_pdf_filename": "6.9.pdf", "page_number": 12, "structured_category": "food_safety", "structured_field_name": "frying.max_oil_temperature_c", "quoted_requirement": "השמן לא יחומם לטמפרטורה מעל 180 מע''צ. טמפרטורה מומלצת להליך טיגון עמוק היא 160-180ºC", "extracted_structured_value": { "max_temp_c": 180, "recommended_range_c": [160, 180] }, "verified": true },
+
+    { "id": "69-FRY-RATIO-4", "source_pdf_filename": "6.9.pdf", "page_number": 12, "structured_category": "food_safety", "structured_field_name": "frying.oil_to_food_ratio", "quoted_requirement": "להקפיד על יחס בין נפחי שמן ומזון, של ארבע לאחד לפחות", "extracted_structured_value": { "min_ratio_oil_to_food": 4 }, "verified": true },
+
+    { "id": "69-FRY-TPM-27", "source_pdf_filename": "6.9.pdf", "page_number": 12, "structured_category": "food_safety", "structured_field_name": "frying.max_tpm_pct", "quoted_requirement": "ערכי TPM (TOTAL POLAR MATERIALS) לא יעלו על 27%", "extracted_structured_value": { "max_tpm_pct": 27 }, "verified": true },
+
+    { "id": "69-EXT-6KG", "source_pdf_filename": "6.9.pdf", "page_number": 14, "structured_category": "fire", "structured_field_name": "fire.extinguisher_spec", "quoted_requirement": "בעסק יוצבו מטפי כיבוי מסוג אבקה יבשה במשקל של 6 ק\"ג", "extracted_structured_value": { "type": "dry_powder", "weight_kg": 6 }, "verified": true },
+
+    { "id": "69-EXT-STD-129", "source_pdf_filename": "6.9.pdf", "page_number": 15, "structured_category": "fire", "structured_field_name": "fire.extinguisher_maintenance_standard", "quoted_requirement": "בדיקת מטפי הכיבוי ותחזוקתם תעשה לפי האמור בתקן ישראלי ת\"י 129, חלק 1 מטפים מיטלטלים - תחזוקה", "extracted_structured_value": { "standard": "SI 129 part 1" }, "verified": true },
+
+    { "id": "69-GAS-158", "source_pdf_filename": "6.9.pdf", "page_number": 15, "structured_category": "fire", "structured_field_name": "fire.lpg_system_standard", "quoted_requirement": "מערכת הגפ\"מ המשמשת את העסק תענה לתקן ישראלי ת\"י 158 מתקנים לגזים פחמימניים מעובים (גפ\"מ)", "extracted_structured_value": { "standard": "SI 158" }, "verified": true },
+
+    { "id": "5688-DEF-MASSEVENT", "source_pdf_filename": "5688.1.pdf", "page_number": 8, "structured_category": "definitions", "structured_field_name": "5688:3.1 mass_event_threshold", "quoted_requirement": "אירוע המוני: התכנסות מאורגנת של קהל באתר לשם עינוג ציבורי כהגדרתו בחוק, שמספר המשתתפים הצפוי בה הוא 1000 בני אדם או יותר, או התכנסות מאורגנת אחרת באתר, לכל מטרה ... שמספר המשתתפים הצפוי בה הוא 3000 בני אדם או יותר", "extracted_structured_value": { "entertainment_threshold": 1000, "other_gathering_threshold": 3000 }, "verified": true },
+
+    { "id": "5688-SCOPE", "source_pdf_filename": "5688.1.pdf", "page_number": 8, "structured_category": "scope", "structured_field_name": "5688:1 applicability", "quoted_requirement": "תקן זה, יחד עם התקן הישראלי ת\"י 5688 חלק 2, חל על אירועים המוניים. אירוע המוני יכול להתקיים בתוך מבנה, תחת כיפת השמים או באתרים אחרים", "extracted_structured_value": null, "verified": true },
+
+    { "id": "5688-SAFETYPLAN", "source_pdf_filename": "5688.1.pdf", "page_number": 14, "structured_category": "management_system", "structured_field_name": "5688:3.21 safety_plan", "quoted_requirement": "תוכנית בטיחות לאירוע: מסמך יחיד המרכז את המידע הנדרש לניהול הסיכונים ולניהול הבטיחות באירוע המוני, ומשמש גם כמכשיר לניהול הבטיחות ולמילוי דרישות החוק", "extracted_structured_value": null, "verified": true },
+
+    { "id": "5688-EVENTMGR", "source_pdf_filename": "5688.1.pdf", "page_number": 15, "structured_category": "management_system", "structured_field_name": "5688:4.2 event_manager", "quoted_requirement": "לכל אירוע המוני ימונה מנהל אירוע, שיהיה בעל כישורים, הכשרה וניסיון מתאימים לארגון ולניהול של אירועים המוניים", "extracted_structured_value": null, "verified": true },
+
+    { "id": "5688-SAFETYADVISOR", "source_pdf_filename": "5688.1.pdf", "page_number": 16, "structured_category": "management_system", "structured_field_name": "5688:4.2.b safety_advisor", "quoted_requirement": "מנהל האירוע ימנה יועץ בטיחות לאירוע המוני (הגדרה 3.4). לפי הצרכים ומידת המורכבות של האירוע, ימנה מנהל האירוע אנשי מקצוע נוספים בנושאי בטיחות שונים", "extracted_structured_value": null, "verified": true },
+
+    { "id": "5688-RISKMGMT", "source_pdf_filename": "5688.1.pdf", "page_number": 6, "structured_category": "management_system", "structured_field_name": "5688:3.14 risk_management", "quoted_requirement": "ניהול סיכונים: תהליך רב-שלבי מובנה ושיטתי לזיהוי, להערכה ולבקרה של סיכונים, במטרה לבטלם או לפחות לצמצמם ככל האפשר", "extracted_structured_value": null, "verified": true }
+
+  ],
+  "coverage_note": "Extraction prioritizes the operative, normative requirements (dimensional/numeric thresholds and explicit obligations) verbatim from the source PDFs. Administrative form fields, signatures, and boilerplate legal recitals were not enumerated as requirements. Each citation is traceable to its source PDF and page; quotes are reproduced from the Hebrew source text."
 }
