@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "event-safety-cad/citation",
+  "title": "Regulatory Citation Record",
+  "description": "A single requirement extracted directly from a source PDF in /standards. Every field is mandatory; no value may be supplied from memory, assumptions, industry defaults, or a derived YAML database.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "source_pdf_filename",
+    "page_number",
+    "quoted_requirement",
+    "extracted_structured_value",
+    "verified"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable identifier, e.g. 'EGRESS-EXIT-COUNT-01'."
+    },
+    "source_pdf_filename": {
+      "type": "string",
+      "description": "Exact PDF filename under /standards the requirement was read from.",
+      "pattern": ".+\\.pdf$"
+    },
+    "page_number": {
+      "description": "Page number within the source PDF. If unavailable, use the exact string 'Source document required for verification'.",
+      "oneOf": [
+        { "type": "integer", "minimum": 1 },
+        { "type": "string", "const": "Source document required for verification" }
+      ]
+    },
+    "quoted_requirement": {
+      "type": "string",
+      "description": "Verbatim quote of the requirement text from the PDF. No paraphrasing."
+    },
+    "extracted_structured_value": {
+      "description": "The structured value parsed from the quote (number, ratio, boolean, or object). Must be traceable to the quote.",
+      "type": ["number", "string", "boolean", "object", "array", "null"]
+    },
+    "structured_field_name": {
+      "type": "string",
+      "description": "Optional canonical field name this requirement maps to."
+    },
+    "verified": {
+      "type": "boolean",
+      "description": "True only if source_pdf_filename exists in /standards AND page_number is an integer AND quoted_requirement is non-empty."
+    }
+  }
+}
