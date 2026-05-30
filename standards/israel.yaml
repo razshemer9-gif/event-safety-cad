@@ -1,0 +1,96 @@
+# =============================================================================
+# Israeli Event Safety Standards (machine-readable)
+# =============================================================================
+#
+# This file encodes the safety parameters that drive occupancy, egress and
+# life-safety calculations for the generator.
+#
+# ⚠️  IMPORTANT — VERIFY BEFORE OPERATIONAL USE
+# The numeric values below are a STARTING-POINT MODEL based on common Israeli
+# event-safety practice (חוק רישוי עסקים, תקנות הבטיחות באירועים תחת כיפת השמיים,
+# and fire-service "מבחני אש" guidance). They are NOT a substitute for the
+# current official regulations or a licensed safety engineer (יועץ בטיחות).
+# Each value carries a `ref` you should reconcile against the authoritative
+# source before relying on any generated plan.
+# =============================================================================
+
+meta:
+  jurisdiction: "IL"
+  name: "Israel — Event Safety (baseline model)"
+  version: "0.1.0"
+  units: "metric"          # all lengths in metres, areas in m²
+  disclaimer: >
+    Illustrative baseline values. Reconcile against current Israeli regulations
+    and a licensed safety consultant before operational use.
+
+# -----------------------------------------------------------------------------
+# Occupancy load — how many people a usable area is assumed to hold.
+# Used to derive the design occupant count when an explicit headcount is absent,
+# and to sanity-check a declared headcount against the available area.
+# Expressed as net floor area (m²) required PER PERSON.
+# -----------------------------------------------------------------------------
+occupancy:
+  area_per_person_m2:
+    standing_dense: 0.25     # tight standing crowd (front-of-stage)
+    standing: 0.50           # general standing audience
+    seated_loose: 0.65       # seated rows with circulation
+    seated_dense: 0.45       # close-packed seating
+    assembly_concentrated: 0.65
+    exhibition: 1.5          # booths / exhibition floor
+  default_profile: "standing"
+
+# -----------------------------------------------------------------------------
+# Egress / exits — number and width of exits required for the occupant load.
+# -----------------------------------------------------------------------------
+egress:
+  # Required exit-door width per occupant. Width (m) = occupants * factor,
+  # then rounded up to the unit module and clamped to the minimum.
+  width_per_occupant_m: 0.0077      # ≈ 0.77 m per 100 people
+  unit_width_m: 0.55                # one "exit unit" (lane) module
+  min_exit_clear_width_m: 1.10      # minimum clear width of any single exit
+  min_main_exit_width_m: 1.65       # minimum clear width of the main exit
+
+  # Minimum NUMBER of independent exits as a function of occupant load.
+  # Each tier: applies when occupants <= max_occupants.
+  min_exits_by_occupancy:
+    - { max_occupants: 50,    exits: 1 }
+    - { max_occupants: 500,   exits: 2 }
+    - { max_occupants: 1000,  exits: 3 }
+    - { max_occupants: 2000,  exits: 4 }
+    - { max_occupants: null,  exits: 6 }   # null == no upper bound
+
+  max_travel_distance_m: 45         # max distance from any point to an exit
+  min_aisle_width_m: 1.20           # minimum clear aisle within the crowd area
+
+# -----------------------------------------------------------------------------
+# Medical / first-aid provision scaled to crowd size.
+# -----------------------------------------------------------------------------
+medical:
+  # First-aid station: at least one, plus one per N occupants.
+  first_aid_station_per_occupants: 1000
+  min_first_aid_stations: 1
+  # On-site ambulance threshold (occupants at/above which one is required).
+  ambulance_required_at_occupants: 500
+  ambulance_per_occupants: 5000
+
+# -----------------------------------------------------------------------------
+# Fire safety equipment placement.
+# -----------------------------------------------------------------------------
+fire:
+  extinguisher_max_spacing_m: 15    # max travel distance to an extinguisher
+  extinguisher_per_area_m2: 200     # at least one per this much floor area
+  min_extinguishers: 2
+
+# -----------------------------------------------------------------------------
+# Sanitation — informational, not drawn, but reported.
+# -----------------------------------------------------------------------------
+sanitation:
+  toilets_per_occupants: 100
+  min_toilets: 2
+
+# -----------------------------------------------------------------------------
+# Stage / barrier setbacks.
+# -----------------------------------------------------------------------------
+stage:
+  front_barrier_setback_m: 1.5      # gap between stage edge and crowd barrier
+  side_clearance_m: 1.0

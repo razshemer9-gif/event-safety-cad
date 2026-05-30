@@ -1,0 +1,25 @@
+# Example event plan — an open-air standing concert.
+# Run with:  python -m generator examples/summer_festival.yaml
+
+event:
+  name: "Summer Festival 2026"
+  type: concert
+  crowd_profile: standing        # references standards.occupancy.area_per_person_m2
+  expected_attendance: 1500      # omit to derive capacity from usable area
+
+venue:
+  width_m: 60                    # east-west
+  depth_m: 45                    # north-south
+
+stage:
+  width_m: 16
+  depth_m: 8
+  # position omitted -> centred against the north (far) edge
+
+# exits omitted -> auto-placed to satisfy the egress requirement.
+# To place them explicitly, e.g.:
+# exits:
+#   - { side: south, offset_m: 15, width_m: 3.0, label: "MAIN" }
+#   - { side: south, offset_m: 45, width_m: 3.0 }
+#   - { side: west,  offset_m: 22, width_m: 1.65 }
+#   - { side: east,  offset_m: 22, width_m: 1.65 }
